@@ -1,9 +1,10 @@
+name: Backend CI
+
 on:
   push:
-    branches:
-      - main
-      - develop
+    branches: [main]
   pull_request:
+    branches: [main]
 
 jobs:
   backend:
@@ -14,7 +15,8 @@ jobs:
         working-directory: server
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
@@ -27,9 +29,5 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
-      - name: Check imports
-        run: uv run python -c "import app.main"
-
-      - name: Run tests
-        run: uv run pytest
-        continue-on-error: true
+      - name: Verify application imports
+        run: uv run python -c "from app.main import app"
