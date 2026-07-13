@@ -4,6 +4,7 @@ from app.core.config import settings
 
 
 class GitHubService:
+
     async def get_repository(self, owner: str, repo: str):
         headers = {}
 
@@ -18,3 +19,7 @@ class GitHubService:
         response.raise_for_status()
 
         return response.json()
+
+
+# Create singleton instance
+github_service = GitHubService()
