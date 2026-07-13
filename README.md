@@ -1,3 +1,6 @@
+# OSRA - Open Source Repository Analyzer
+
+
 uv run python -m ml.scripts.collect_data
 uv run python -m ml.scripts.preprocess
 uv run python -m ml.scripts.feature_engineering
