@@ -1,20 +1,18 @@
 from fastapi import FastAPI
 
+from app.api.router import router
+from app.core.config import settings
+
 app = FastAPI(
-    title="OSRA API",
-    version="1.0.0",
+    title=settings.APP_NAME,
+    version=settings.APP_VERSION,
 )
+
+app.include_router(router)
 
 
 @app.get("/")
 def root():
     return {
-        "message": "OSRA API is running"
-    }
-
-
-@app.get("/health")
-def health():
-    return {
-        "status": "healthy"
+        "message": "Welcome to OSRA API"
     }
