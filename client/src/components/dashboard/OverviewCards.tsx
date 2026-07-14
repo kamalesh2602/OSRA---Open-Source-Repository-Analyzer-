@@ -1,11 +1,21 @@
+import RepositoryChart from "./RepositoryChart";
+
 interface Props {
     repository: any;
 }
 
-function Card({ title, value }: { title: string; value: any }) {
+function Card({
+    title,
+    value,
+}: {
+    title: string;
+    value: any;
+}) {
     return (
         <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h3 className="text-slate-400">{title}</h3>
+            <h3 className="text-sm text-slate-400">
+                {title}
+            </h3>
 
             <p className="mt-3 text-3xl font-bold">
                 {value}
@@ -14,26 +24,49 @@ function Card({ title, value }: { title: string; value: any }) {
     );
 }
 
-export default function OverviewCards({ repository }: Props) {
+export default function OverviewCards({
+    repository,
+}: Props) {
     return (
-        <div className="mx-auto mb-20 grid max-w-7xl grid-cols-1 gap-6 px-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mb-20 max-w-7xl px-8">
 
-            <Card title="Repository Profile" value={repository.profile} />
+            <div className="mb-8 rounded-3xl border border-white/10 bg-white/5 p-8">
 
-            <Card title="Cluster" value={repository.cluster} />
+                <h2 className="text-3xl font-bold">
+                    {repository.profile}
+                </h2>
 
-            <Card title="Insight" value={repository.insight} />
-            <Card title="⭐ Stars" value={repository.stars} />
+                <p className="mt-5 leading-8 text-slate-300">
+                    {repository.insight}
+                </p>
 
-            <Card title="🍴 Forks" value={repository.forks} />
+            </div>
 
-            <Card title="🐞 Open Issues" value={repository.open_issues} />
+            <div className="mb-8">
+                <RepositoryChart repository={repository} />
+            </div>
 
-            <Card title="💻 Language" value={repository.language} />
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-            <Card title="👀 Watchers" value={repository.watchers} />
+                <Card title="⭐ Stars" value={repository.stars} />
 
-            <Card title="📦 Size" value={repository.size} />
+                <Card title="🍴 Forks" value={repository.forks} />
+
+                <Card title="👀 Watchers" value={repository.watchers} />
+
+                <Card
+                    title="🐞 Open Issues"
+                    value={repository.open_issues}
+                />
+
+                <Card
+                    title="💻 Language"
+                    value={repository.language}
+                />
+
+                <Card title="📦 Size" value={repository.size} />
+
+            </div>
 
         </div>
     );
