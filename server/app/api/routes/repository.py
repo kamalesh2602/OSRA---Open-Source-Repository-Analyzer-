@@ -28,6 +28,13 @@ async def analyze_repository(data: RepositoryRequest):
         repository = await github.get_repository(owner, repo)
 
         ml_result = predict(owner, repo)
+        
+
+        if ml_result is None:
+            raise HTTPException(
+                status_code=500,
+                detail="ML prediction failed.",
+            )
 
         return {
             "owner": repository["owner"]["login"],
