@@ -1,0 +1,6 @@
+cluster,stars,forks,watchers,subscribers,contributors,releases,branches,open_issues,size,readme_size,repositories,name,insight
+0,6826.09,1374.17,6826.09,308.78,9.0,3.03,2.85,47.96,42822.19,13253.4,118,Growing Community Projects,These repositories are actively growing with moderate community adoption and regular development.
+1,51.4,22.0,51.4,8.57,3.63,1.09,1.89,3.11,2999.57,2248.89,35,Small & Experimental Projects,"These repositories are typically personal projects, prototypes, or newly created repositories with limited community activity."
+2,23772.97,3709.14,23772.97,146.28,23.25,18.06,16.42,261.12,276880.22,12477.2,69,Established Open Source,"These repositories have established communities, consistent development activity, and are commonly used in real-world applications."
+3,295370.18,42626.41,295370.18,5735.36,28.64,5.55,9.09,1261.0,480372.95,79530.5,22,Enterprise Scale Projects,"These repositories represent globally adopted open-source projects with massive communities, extensive ecosystem support, and widespread production usage."
+4,192687.83,30769.83,192687.83,875.5,30.0,22.5,26.5,5375.33,418600.83,38710.0,6,Highly Active Ecosystem,"These repositories combine high popularity with frequent releases and active maintenance, indicating a healthy and continuously evolving project."

@@ -1,0 +1,62 @@
+{
+    "0": {
+        "cluster": 0,
+        "name": "Growing Community Projects",
+        "insight": "These repositories are actively growing with moderate community adoption and regular development.",
+        "repositories": 118,
+        "average_stars": 6826.09,
+        "average_forks": 1374.17,
+        "average_watchers": 6826.09,
+        "average_contributors": 9.0,
+        "average_releases": 3.03,
+        "average_size": 42822.19
+    },
+    "1": {
+        "cluster": 1,
+        "name": "Small & Experimental Projects",
+        "insight": "These repositories are typically personal projects, prototypes, or newly created repositories with limited community activity.",
+        "repositories": 35,
+        "average_stars": 51.4,
+        "average_forks": 22.0,
+        "average_watchers": 51.4,
+        "average_contributors": 3.63,
+        "average_releases": 1.09,
+        "average_size": 2999.57
+    },
+    "2": {
+        "cluster": 2,
+        "name": "Established Open Source",
+        "insight": "These repositories have established communities, consistent development activity, and are commonly used in real-world applications.",
+        "repositories": 69,
+        "average_stars": 23772.97,
+        "average_forks": 3709.14,
+        "average_watchers": 23772.97,
+        "average_contributors": 23.25,
+        "average_releases": 18.06,
+        "average_size": 276880.22
+    },
+    "3": {
+        "cluster": 3,
+        "name": "Enterprise Scale Projects",
+        "insight": "These repositories represent globally adopted open-source projects with massive communities, extensive ecosystem support, and widespread production usage.",
+        "repositories": 22,
+        "average_stars": 295370.18,
+        "average_forks": 42626.41,
+        "average_watchers": 295370.18,
+        "average_contributors": 28.64,
+        "average_releases": 5.55,
+        "average_size": 480372.95
+    },
+    "4": {
+        "cluster": 4,
+        "name": "Highly Active Ecosystem",
+        "insight": "These repositories combine high popularity with frequent releases and active maintenance, indicating a healthy and continuously evolving project.",
+        "repositories": 6,
+        "average_stars": 192687.83,
+        "average_forks": 30769.83,
+        "average_watchers": 192687.83,
+        "average_contributors": 30.0,
+        "average_releases": 22.5,
+        "average_size": 418600.83
+    }
+}
