@@ -11,7 +11,8 @@ OUTPUT_FILE = BASE_DIR / "data" / "processed" / "processed_dataset.csv"
 def preprocess():
 
     df = pd.read_csv(INPUT_FILE)
-
+    print(df["category"].value_counts())
+    
     # Remove duplicates
     df.drop_duplicates(
         subset=["owner", "repository"],

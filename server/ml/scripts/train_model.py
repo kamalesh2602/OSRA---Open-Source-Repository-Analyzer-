@@ -41,7 +41,7 @@ for k in K:
     model = KMeans(
         n_clusters=k,
         random_state=42,
-        n_init=10,
+        n_init=20,
     )
 
     labels = model.fit_predict(X)
@@ -59,7 +59,11 @@ print("\nK Selection")
 
 for k, score in zip(K, silhouette_scores):
 
-    print(f"K={k}   Silhouette={score:.4f}")
+    print(
+    f"K={k} | "
+    f"Silhouette={score:.4f} | "
+    f"Inertia={inertia[k-2]:.2f}"
+)
 
 # -----------------------------
 # Select Best K
@@ -74,12 +78,14 @@ print(f"\nBest K = {best_k}")
 model = KMeans(
     n_clusters=best_k,
     random_state=42,
-    n_init=10,
+    n_init=20,
 )
 
 clusters = model.fit_predict(X)
 
 df["cluster"] = clusters
+print("\nCluster Distribution")
+print(df["cluster"].value_counts().sort_index())
 
 # -----------------------------
 # Save Model

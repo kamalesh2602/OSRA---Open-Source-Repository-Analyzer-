@@ -1,26 +1,26 @@
 {
     "0": {
         "cluster": 0,
-        "name": "Actively Maintained | Mature | Lightweight | Emerging",
-        "insight": "This cluster represents actively maintained | mature | lightweight | emerging repositories with an average of 61177 stars, 29 contributors, and 132 repositories.",
-        "repositories": 132,
-        "average_stars": 61177.81,
-        "average_forks": 12752.04,
-        "average_watchers": 61177.81,
-        "average_contributors": 29.95,
-        "average_releases": 25.89,
-        "average_size": 664440.33
+        "name": "Mature | Lightweight | Emerging",
+        "insight": "This cluster represents mature | lightweight | emerging repositories with an average of 11242 stars, 12 contributors, and 223 repositories.",
+        "repositories": 223,
+        "average_stars": 11242.27,
+        "average_forks": 1896.44,
+        "average_watchers": 11242.27,
+        "average_contributors": 12.75,
+        "average_releases": 7.63,
+        "average_size": 109104.83
     },
     "1": {
         "cluster": 1,
-        "name": "Popular",
-        "insight": "This cluster represents popular repositories with an average of 239327 stars, 0 contributors, and 1 repositories.",
-        "repositories": 1,
-        "average_stars": 239327.0,
-        "average_forks": 63444.0,
-        "average_watchers": 239327.0,
-        "average_contributors": 0.0,
-        "average_releases": 0.0,
-        "average_size": 6323276.0
+        "name": "Popular | Actively Maintained",
+        "insight": "This cluster represents popular | actively maintained repositories with an average of 281291 stars, 28 contributors, and 27 repositories.",
+        "repositories": 27,
+        "average_stars": 281291.04,
+        "average_forks": 41420.22,
+        "average_watchers": 281291.04,
+        "average_contributors": 28.11,
+        "average_releases": 7.3,
+        "average_size": 481932.26
     }
 }

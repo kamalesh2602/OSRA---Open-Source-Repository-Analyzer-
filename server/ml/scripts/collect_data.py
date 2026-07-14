@@ -108,6 +108,7 @@ def extract_metadata(
     releases,
     branches,
     readme_size,
+    category
 ):
     license_name = None
 
@@ -118,6 +119,7 @@ def extract_metadata(
         # Repository
         "owner": repo_data["owner"]["login"],
         "repository": repo_data["name"],
+        "category": category,
 
         # Popularity
         "stars": repo_data["stargazers_count"],
@@ -168,7 +170,8 @@ def collect_data():
 
     for _, row in tqdm(repositories.iterrows(), total=len(repositories)):
         owner = row["owner"]
-        repo = row["repo"]
+        repo = row["repository"]
+        category = row["category"]
 
         repository = get_repository(owner, repo)
 
@@ -187,6 +190,7 @@ def collect_data():
                 releases,
                 branches,
                 readme_size,
+                category
             )
         )
 

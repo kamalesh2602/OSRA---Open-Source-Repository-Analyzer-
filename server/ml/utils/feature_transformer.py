@@ -42,8 +42,55 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
         df["open_issues"] / (df["stars"] + 1)
     )
 
-    df["readme_per_size"] = (
-        df["readme_size"] / (df["size"] + 1)
+    df["documentation_score"] = (
+        df["readme_size"] / 1024
+)
+
+    # -----------------------------
+    # Growth Metrics
+    # -----------------------------
+    df["stars_per_day"] = (
+        df["stars"] /
+        (df["repository_age_days"] + 1)
+    )
+
+    df["contributors_per_day"] = (
+        df["contributors"] /
+        (df["repository_age_days"] + 1)
+    )
+
+    df["releases_per_year"] = (
+        df["releases"] * 365 /
+        (df["repository_age_days"] + 1)
+    )
+
+    # -----------------------------
+    # Activity Metrics
+    # -----------------------------
+    df["commit_recency_score"] = (
+        1 / (df["days_since_last_commit"] + 1)
+    )
+
+    df["update_recency_score"] = (
+        1 / (df["days_since_last_update"] + 1)
+    )
+
+    # -----------------------------
+    # Community Metrics
+    # -----------------------------
+    df["contributors_per_branch"] = (
+        df["contributors"] /
+        (df["branches"] + 1)
+    )
+
+    df["watchers_per_star"] = (
+        df["watchers"] /
+        (df["stars"] + 1)
+    )
+
+    df["subscribers_per_star"] = (
+        df["subscribers"] /
+        (df["stars"] + 1)
     )
 
     return df
